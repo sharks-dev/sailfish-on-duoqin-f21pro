@@ -7,7 +7,9 @@ https://github.com/sharks-dev/android_kernel_duoqin_mt6761
 
 ## Also handy:
 For information on the hardware, how to unlock bootloader, mtkclient, etc.: https://github.com/AlikornSause/Notes-on-QIN-F21-PRO
+
 How to build the kernel: https://github.com/ravindu644/Android-Kernel-Tutorials
+
 Some detailed hardware information relevant to fixing the kernel: https://4pda.to/forum/index.php?showtopic=1030274&st=6280#entry144725465
 
 ## Notes:
