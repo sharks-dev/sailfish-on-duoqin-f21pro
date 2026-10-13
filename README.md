@@ -17,7 +17,7 @@ Some detailed hardware information relevant to fixing the kernel: https://4pda.t
 I have never tried to build an Android kernel from scratch. I used [ravindu644's build_4.19.sh](https://github.com/ravindu644/Android-Kernel-Tutorials/blob/main/build_scripts/build_4.19.sh) to get me an Image.gz.
 
 Roadmap:
-- [X] Get the kernel built
+- [X] Learn how to build an Android kernel
 - [ ] Get a boot img
 - [ ] Boot stock Android on the custom kernel
 - [ ] Fix the custom kernel (touch & sound at minimum)
