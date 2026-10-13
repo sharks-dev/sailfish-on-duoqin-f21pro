@@ -1,0 +1,1 @@
+# sailfish-on-duoqin-f21pro
