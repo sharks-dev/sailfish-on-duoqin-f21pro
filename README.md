@@ -20,7 +20,7 @@ Sync with `repo sync --force-sync -cj6 --no-clone-bundle`, *not* `repo sync --fe
 
 repo sync writes 102 GB to $ANDROID_ROOT
 
-I had to apply this patch to build droid-hal sucessfully:
+I had to apply this patch to build droid-hal and mic successfully:
 
 ```
 diff --git a/droid-hal-device.inc b/droid-hal-device.inc
@@ -36,6 +36,20 @@ index 7717982..f56e0b0 100644
 +    if [ ! -f "$art_path/$apex_path/lib/bionic/libc.so" ]; then
          apex_path=system/
      fi
+
+diff --git a/helpers/build_packages.sh b/helpers/build_packages.sh
+index f0e4800..a1ed055 100755
+--- a/helpers/build_packages.sh
++++ b/helpers/build_packages.sh
+@@ -414,7 +414,7 @@ if [ "$BUILDIMAGE" = "1" ]; then
+             --tokenmap=$tokenmap \
+             --record-pkgs=name,url \
+             --outdir=$imgname \
+-            --pack-to=sfe-$DEVICE-$RELEASE"$EXTRA_NAME".tar.bz2 \
++            --pack-to=sfe-$DEVICE-$RELEASE"$EXTRA_NAME".tar \
+             "$ANDROID_ROOT"/$ks
+     else
+         sudo mic create loop --arch=$PORT_ARCH \
 ```
 
 ## Also handy:
