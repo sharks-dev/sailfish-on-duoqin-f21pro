@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <!-- F21Pro Device Tree -->
+  <project path="device/duoqin/f21pro" name="VerdandiTeam/android_device_duoqin_f21pro" revision="lineage-18.1" />
+
+  <!-- F21Pro Proprietary Blobs -->
+  <project path="kernel/duoqin/mt6761" name="VerdandiTeam/android_kernel_duoqin_mt6761" revision="android-11.0" />
+
+  <!-- Reverse-engineered Kernel -->
+  <project path="vendor/duoqin/f21pro" name="VerdandiTeam/android_vendor_duoqin_f21pro" revision="lineage-18.1" />
+
+  <!-- Sailfish bits -->
+  <project path="rpm/" name="VerdandiTeam/droid-hal-f21pro" revision="master" />
+  <project path="hybris/droid-configs" name="VerdandiTeam/droid-config-f21pro" revision="master" />
+  <project path="hybris/droid-hal-version-f21pro" name="VerdandiTeam/droid-hal-version-f21pro" revision="master" />
+
+  <!-- fixup-mountpoints -->
+  <project path="hybris/hybris-boot" name="sharks-dev/hybris-boot" revision="master" />
+</manifest>
