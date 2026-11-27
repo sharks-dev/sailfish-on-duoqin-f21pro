@@ -15,5 +15,5 @@
   <project path="hybris/droid-hal-version-f21pro" name="VerdandiTeam/droid-hal-version-f21pro" revision="master" />
 
   <!-- fixup-mountpoints -->
-  <project path="hybris/hybris-boot" name="sharks-dev/hybris-boot" revision="master" />
+  <project path="hybris/hybris-boot" name="VerdandiTeam/hybris-boot" revision="f21pro" />
 </manifest>
