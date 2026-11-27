@@ -1,0 +1,34 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Fri, 27 Nov 2026 23:00:00 +0100
+Subject: [PATCH] (hybris) Don't switch root to /first_stage_ramdisk
+
+Bootloaders of recovery-as-boot devices pass
+androidboot.force_normal_boot=1, which makes first stage init
+SwitchRoot() to /first_stage_ramdisk. Under hybris the root
+filesystem is set up by Mer/systemd, so moving its mounts fails
+("Unable to move mount at '/data': Invalid argument") and
+droid-hal-init exits with status 6.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+---
+ init/first_stage_init.cpp | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/init/first_stage_init.cpp b/init/first_stage_init.cpp
+--- a/init/first_stage_init.cpp
++++ b/init/first_stage_init.cpp
+@@ -276,7 +276,9 @@ int FirstStageMain(int argc, char** argv) {
+         StartConsole();
+     }
+ 
+-    if (ForceNormalBoot(cmdline)) {
++    // hybris: the root filesystem is set up by Mer/systemd; switching to
++    // /first_stage_ramdisk would try to move its mounts (e.g. /data) and fail.
++    if (/*ForceNormalBoot(cmdline)*/ false) {
+         mkdir("/first_stage_ramdisk", 0755);
+         // SwitchRoot() must be called with a mount point as the target, so we bind mount the
+         // target directory to itself here.
+-- 
+2.43.0
+
