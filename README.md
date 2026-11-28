@@ -105,6 +105,8 @@ lrwxrwxrwx 1 root root 21 2026-11-25 20:57 vendor_boot_a -> /dev/block/mmcblk0p2
 lrwxrwxrwx 1 root root 21 2026-11-25 20:57 vendor_boot_b -> /dev/block/mmcblk0p36
 ```
 
+We have [non-updatable apex](https://sailfishos.wiki/link/20#bkmrk---experimental-fix-f)
+
 ## Also handy:
 For information on the hardware, how to unlock bootloader, mtkclient, etc.: https://github.com/AlikornSause/Notes-on-QIN-F21-PRO
 
