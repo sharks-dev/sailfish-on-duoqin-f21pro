@@ -107,6 +107,8 @@ lrwxrwxrwx 1 root root 21 2026-11-25 20:57 vendor_boot_b -> /dev/block/mmcblk0p3
 
 We have [non-updatable apex](https://sailfishos.wiki/link/20#bkmrk---experimental-fix-f)
 
+Remove line `restorecon --recursive --skip-ce /data` from init.rc
+
 ## Also handy:
 For information on the hardware, how to unlock bootloader, mtkclient, etc.: https://github.com/AlikornSause/Notes-on-QIN-F21-PRO
 
